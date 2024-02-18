@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC Database Connection settings-->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<!-- Make sure that you provide available database name in below path -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/week14assignment</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		
+		<!-- Select out SQL dialect-->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		
+		<!-- Echo the sql to stdout--> <!-- it will be shown in the console-->
+		<property name="show_sql">true</property>
+		
+		<!-- Set the current session context-->
+		<property name="current_session_context_class">thread</property>
+		
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<mapping class="com.model.Employee"/>
+		
+						
+	</session-factory>
+</hibernate-configuration>

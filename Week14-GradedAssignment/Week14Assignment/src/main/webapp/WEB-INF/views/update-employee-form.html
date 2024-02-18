@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Update Employee Form</title>
+	<style>
+  table
+  {
+	  margin-left: auto;
+	  margin-right: auto;
+  }
+</style>
+</head>
+
+<body bgcolor="#f09cbf">
+	<table border="2">
+		<form action="update" method="post">
+			<tr>
+				<td>Employee ID</td>
+				<td><input type="number" readonly name="id" th:value="${update.id}" required /></td>
+			</tr>
+			<tr>
+				<td>Employee Name</td>
+				<td><input type="text" name="employeeName" th:value="${update.employeeName}"></td>
+			</tr>
+			<tr>
+				<td>Employee Address</td>
+				<td><input type="text" name="employeeAddress" th:value="${update.employeeAddress}"></td>
+			</tr>
+			<tr>
+				<td>Employee Phone</td>
+				<td><input type="text" name="employeePhone" th:value="${update.employeePhone}"></td>
+			</tr>
+			<tr>
+				<td>Employee Salary</td>
+				<td><input type="text" name="employeeSalary" th:value="${update.employeeSalary}"></td>
+			</tr>
+			<tr>
+				<td><button type="submit">Save..</button></td>
+				<td><button type="reset">ReSet..</button></td>
+			</tr>
+		</form>
+	</table>
+</body>
+
+</html>
